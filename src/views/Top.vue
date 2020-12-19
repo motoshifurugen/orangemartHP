@@ -1,18 +1,31 @@
 <template>
     <div class="top">
-        <swiper :options="swiperOption">
-            <swiper-slide><img src="../assets/images/slider1.jpg" alt="スライダー1"></swiper-slide>
-            <swiper-slide><img src="../assets/images/slider2.jpg" alt="スライダー2"></swiper-slide>
-            <swiper-slide><img src="../assets/images/slider3.jpg" alt="スライダー3"></swiper-slide>
-            <swiper-slide><img src="../assets/images/slider4.jpg" alt="スライダー4"></swiper-slide>
-        </swiper>
-        <router-link to="/leaflet"><Leaflet></Leaflet></router-link>
+        <v-container>
+            <v-row>
+                <v-col cols="12" sm="12" md="8" lg="8">
+                    <swiper :options="swiperOption">
+                        <swiper-slide><img src="../assets/images/slider1.jpg" alt="スライダー1"></swiper-slide>
+                        <swiper-slide><img src="../assets/images/slider2.jpg" alt="スライダー2"></swiper-slide>
+                        <swiper-slide><img src="../assets/images/slider3.jpg" alt="スライダー3"></swiper-slide>
+                        <swiper-slide><img src="../assets/images/slider4.jpg" alt="スライダー4"></swiper-slide>
+                    </swiper>
+                </v-col>
+                <v-col cols="12" sm="12" md="4" lg="4">
+                    <router-link to="/leaflet"><Leaflet></Leaflet></router-link>
+                </v-col>
+            </v-row>
+            <v-row>
+                <News></News>
+                <v-btn to="/news">お知らせ一覧へ</v-btn>
+            </v-row>
+        </v-container>
     </div>
 </template>
 
 <script>
 import { Swiper, SwiperSlide, directive } from 'vue-awesome-swiper'
-import Leaflet from '../views/Leaflet.vue'
+import Leaflet from './Leaflet.vue'
+import News from './News'
 
 import 'swiper/css/swiper.css'
 
@@ -20,7 +33,8 @@ export default {
     components: {
         Swiper,
         SwiperSlide,
-        Leaflet
+        Leaflet,
+        News
     },
     directives: {
         swiper: directive
