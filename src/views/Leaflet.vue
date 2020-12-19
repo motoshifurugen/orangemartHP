@@ -1,5 +1,20 @@
 <template>
-    <div>
-        <h1>This is leaflet page.</h1>
+    <div id="leaflet">
+        <h1>今週のチラシ</h1>
+        <img src="../assets/images/slider2.jpg" alt="スライダー2">
     </div>
 </template>
+
+<style scoped>
+#leaflet {
+    text-align: center;
+}
+#leaflet h1{
+    font-size: 1.5em;
+    margin-top: 1em;
+}
+#leaflet img {
+    width: 80%;
+    height: auto;
+}
+</style>

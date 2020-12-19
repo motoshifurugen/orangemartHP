@@ -6,18 +6,21 @@
             <swiper-slide><img src="../assets/images/slider3.jpg" alt="スライダー3"></swiper-slide>
             <swiper-slide><img src="../assets/images/slider4.jpg" alt="スライダー4"></swiper-slide>
         </swiper>
+        <router-link to="/leaflet"><Leaflet></Leaflet></router-link>
     </div>
 </template>
 
 <script>
 import { Swiper, SwiperSlide, directive } from 'vue-awesome-swiper'
+import Leaflet from '../views/Leaflet.vue'
 
 import 'swiper/css/swiper.css'
 
 export default {
     components: {
         Swiper,
-        SwiperSlide
+        SwiperSlide,
+        Leaflet
     },
     directives: {
         swiper: directive
