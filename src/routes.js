@@ -18,5 +18,30 @@ export default new Router({
             name: 'test',
             component: TestPage
         },
+        {
+            path: '/top',
+            name: 'top',
+            component: () => import('./views/Top.vue')
+        },
+        {
+            path: '/about',
+            name: 'about',
+            component: () => import('./views/About.vue')
+        },
+        {
+            path: '/news',
+            name: 'news',
+            component: () => import('./views/News.vue')
+        },
+        {
+            path: '/part-time',
+            name: 'part-time',
+            component: () => import('./views/PartTime.vue')
+        },
+        {
+            path: '/leaflet',
+            name: 'leaflet',
+            component: () => import('./views/Leaflet.vue')
+        }
     ]
 })
