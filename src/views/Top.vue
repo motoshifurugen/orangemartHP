@@ -11,16 +11,52 @@
                     </swiper>
                 </v-col>
                 <v-col cols="12" sm="12" md="4" lg="4">
-                    <router-link to="/leaflet"><Leaflet></Leaflet></router-link>
+                    <router-link class="simple-link" to="/leaflet"><Leaflet></Leaflet></router-link>
                 </v-col>
             </v-row>
             <v-row>
+                <v-col cols="12" sm="12" md="6" lg="6">
                 <News></News>
-                <v-btn to="/news">お知らせ一覧へ</v-btn>
+                <div class="center">
+                    <v-btn to="/news">お知らせ一覧へ</v-btn>
+                </div>
+                </v-col>
+            </v-row>
+            <div class="text">
+                <h2>「鮮魚が美味しい！オレンジマート」</h2>
+            </div>
+            <v-row class="center">
+                <v-col cols="12" sm="12" md="6" lg="6">
+                    <v-btn to="/about">店舗情報・営業時間</v-btn>
+                </v-col>
+                <v-col cols="12" sm="12" md="6" lg="6">
+                    <v-btn to="/part-time">アルバイト・パート採用情報</v-btn>
+                </v-col>
             </v-row>
         </v-container>
     </div>
 </template>
+
+<style scoped>
+.top .center{
+    text-align: center;
+}
+.swiper-container {
+    height: 300px;
+    width: 100%;
+}
+.swiper-slide {
+    width:auto;
+    height:auto;
+}
+.swiper-container img {
+    width:100%;
+    height:auto;
+}
+.top .text {
+    text-align: center;
+}
+</style>
 
 <script>
 import { Swiper, SwiperSlide, directive } from 'vue-awesome-swiper'
@@ -55,18 +91,3 @@ export default {
     }
 }
 </script>
-
-<style scoped>
-.swiper-container {
-    height: 300px;
-    width: 100%;
-}
-.swiper-slide {
-    width:auto;
-    height:auto;
-}
-.swiper-container img {
-    width:100%;
-    height:auto;
-}
-</style>
