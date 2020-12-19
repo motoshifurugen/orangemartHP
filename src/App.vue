@@ -11,7 +11,7 @@
             </v-list-item>
             <v-divider></v-divider>
             <v-list nav>
-                <v-list-item v-for="nav_list in nav_lists" :key="nav_list.name">
+                <v-list-item v-for="nav_list in nav_lists" :key="nav_list.name" :to="nav_list.link">
                     <v-list-item-icon>
                         <v-icon>{{ nav_list.icon }}</v-icon>
                     </v-list-item-icon>
@@ -42,10 +42,25 @@ export default {
         return{
             sideMenu: null,
             nav_lists:[
-                {name: '今週のチラシ',icon: 'mdi-cart-variant'},
-                {name: 'お知らせ',icon: 'mdi-email'},
-                {name: '店舗情報・営業時間',icon: 'mdi-store'},
-                {name: 'アルバイト採用',icon: 'mdi-account'},
+                {
+                    name: '今週のチラシ',
+                    icon: 'mdi-cart-variant',
+                    link: '/leaflet'
+                },
+                {
+                    name: 'お知らせ',
+                    icon: 'mdi-email',
+                    link: '/news'
+                },
+                {
+                    name: '店舗情報・営業時間',
+                    icon: 'mdi-store',
+                    link: '/about'
+                },
+                {
+                    name: 'アルバイト採用',
+                    icon: 'mdi-account',
+                    link: '/part-time'},
             ]
         }
     }
