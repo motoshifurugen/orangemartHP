@@ -1,6 +1,6 @@
 <template>
   <v-app>
-      <v-navigation-drawer app v-model="sideMenu">
+      <v-navigation-drawer app v-model="side_menu">
           <v-container>
             <v-list-item>
                 <v-list-item-content>
@@ -22,16 +22,23 @@
             </v-list>
         </v-container>
       </v-navigation-drawer>
-    <v-app-bar color="yellow darken-3" dark app>
-        <v-toolbar-title><router-link class="simple-link" to="/top">オレンジマート</router-link></v-toolbar-title>
+    <v-app-bar class="yellow darken-3" dark app>
+        <v-toolbar-title>オレンジマート</v-toolbar-title>
         <v-spacer></v-spacer>
-        <v-app-bar-nav-icon @click="sideMenu=!sideMenu"></v-app-bar-nav-icon>
+        <v-app-bar-nav-icon @click="side_menu=!side_menu"></v-app-bar-nav-icon>
     </v-app-bar>
     <v-main>
         <router-view />
     </v-main>
-    <v-footer color="yellow darken-3" dark app clipped>
-        株式会社 大倉
+    <v-footer class="yellow darken-3" padless>
+        <v-row align="center" justify="space-around" no-gutters>
+            <v-btn v-for="list in footer_lists" :key="list.name" :to="list.link" class="yellow darken-3" color="white" text>
+                {{ list.name }}
+            </v-btn>
+            <v-col class="yellow darken-3 py-4 text-center white--text" cols="12" >
+                {{ new Date().getFullYear() }} — <strong>株式会社大倉企画</strong>
+            </v-col>
+        </v-row>
     </v-footer>
   </v-app>
 </template>
@@ -46,7 +53,7 @@
 export default {
     data(){
         return{
-            sideMenu: null,
+            side_menu: null,
             nav_lists:[
                 {
                     name: '今週のチラシ',
@@ -67,7 +74,21 @@ export default {
                     name: 'アルバイト採用',
                     icon: 'mdi-account',
                     link: '/part-time'},
-            ]
+            ],
+            footer_lists: [
+                {
+                    name: 'トップ',
+                    link: '/top',
+                },
+                {
+                    name: '会社情報',
+                    link: '/agent',
+                },
+                {
+                    name: '採用',
+                    link: '/part-time',
+                },
+            ],
         }
     }
 };

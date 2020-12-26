@@ -15,8 +15,13 @@
                 </v-col>
             </v-row>
             <v-row>
-                <v-col cols="12" sm="12" md="6" lg="6">
-                <News></News>
+                <v-col cols="12" sm="12" md="12" lg="12">
+                    <div class="text">
+                        <h3>お知らせ</h3>
+                    </div>
+                    <v-container id="scroll-target" style="max-height: 200px" class="overflow-y-auto" >
+                        <News></News>
+                    </v-container>
                 <div class="center">
                     <v-btn to="/news">お知らせ一覧へ</v-btn>
                 </div>
@@ -27,10 +32,10 @@
             </div>
             <v-row class="center">
                 <v-col cols="12" sm="12" md="6" lg="6">
-                    <v-btn to="/about">店舗情報・営業時間</v-btn>
+                    <v-btn to="/about" x-large color="light-blue accent-4" block>店舗情報・営業時間</v-btn>
                 </v-col>
                 <v-col cols="12" sm="12" md="6" lg="6">
-                    <v-btn to="/part-time">アルバイト・パート採用情報</v-btn>
+                    <v-btn to="/part-time" x-large color="green accent-4" block>アルバイト・パート採用情報</v-btn>
                 </v-col>
             </v-row>
         </v-container>
