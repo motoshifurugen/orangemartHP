@@ -1,5 +1,9 @@
 <template>
     <div>
-        <h1>This is about page.</h1>
+        <h1>店舗情報</h1>
+        <h2>オレンジマートオオクラ</h2>
+        <h2>営業時間：</h2>
+        <h3>休業日：</h3>
+        <h3>場所：</h3>
     </div>
 </template>
