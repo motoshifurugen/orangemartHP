@@ -5,7 +5,7 @@
             <v-list-item>
                 <v-list-item-content>
                     <v-list-item-title class="title grey--text text--darken-2">
-                        オレンジマート
+                        <router-link class="simple-link" to="/top">オレンジマート</router-link>
                     </v-list-item-title>
                 </v-list-item-content>
             </v-list-item>
@@ -23,7 +23,7 @@
         </v-container>
       </v-navigation-drawer>
     <v-app-bar color="yellow darken-3" dark app>
-        <v-toolbar-title>オレンジマート</v-toolbar-title>
+        <v-toolbar-title><router-link class="simple-link" to="/top">オレンジマート</router-link></v-toolbar-title>
         <v-spacer></v-spacer>
         <v-app-bar-nav-icon @click="sideMenu=!sideMenu"></v-app-bar-nav-icon>
     </v-app-bar>
@@ -35,6 +35,12 @@
     </v-footer>
   </v-app>
 </template>
+
+<style scoped>
+#app .simple-link {
+    text-decoration: none;
+}
+</style>
 
 <script>
 export default {
