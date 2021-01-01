@@ -42,6 +42,11 @@ export default new Router({
             path: '/leaflet',
             name: 'leaflet',
             component: () => import('./views/Leaflet.vue')
+        },
+        {
+            path: '/agent',
+            name: 'agent',
+            component: () => import('./views/Agent.vue')
         }
     ]
 })

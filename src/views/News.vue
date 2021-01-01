@@ -1,12 +1,25 @@
 <template>
     <div class="news">
-        <h1>お知らせ</h1>
-        <div class="letter-list">
-            <div class="letter">
-                <h2>2020-12-19</h2>
-                <p>寒いです</p>
-            </div>
-        </div>
+        <v-card v-for="letter in news_letters" :key="letter.id">
+            <v-card-text>
+                <div>{{ letter.date }}</div>
+                <p class="display-1 text--primary">
+                    {{ letter.title }}
+                </p>
+                <v-list-item>
+                <v-list-item-content>
+                <div class="text--primary">
+                    {{ letter.detail }}
+                </div>
+                </v-list-item-content>
+                <v-list-item-actions>
+                <v-btn text color="deep-purple accent-4">
+                    詳しく見る
+                </v-btn>
+                </v-list-item-actions>
+                </v-list-item>
+            </v-card-text>
+        </v-card>
     </div>
 </template>
 
@@ -14,4 +27,45 @@
 .news {
     width: 100%;
 }
+.v-card--reveal {
+    bottom: 0;
+    opacity: 1 !important;
+    position: absolute;
+    width: 100%;
+}
 </style>
+
+<script>
+export default {
+    data(){
+        return{
+            reveal: false,
+            news_letters:[
+                {
+                    id: 1,
+                    date: '2020-12-01',
+                    title: '12月26日オープン！',
+                    detail: 'スーパー「オレンジマート」が12月26日からオープンします。鮮魚が美味しくいつでも安い！是非お越しください。'
+                },
+                {
+                    id: 2,
+                    date: '2020-12-05',
+                    title: 'アルバイトスタッフ募集',
+                    detail: 'オレンジマートでは一緒に働いてくれる仲間を随時募集しています。シフト制で週2 ~ 勤務可能です。応募は下記リンク先のフォームから受け付けております。お気軽にご連絡ください！'
+                },
+                {
+                    id: 3,
+                    date: '2020-12-26',
+                    title: 'オープンしました！',
+                    detail: '本日9時より、オレンジマートがオープンしました。皆様の生活に寄り添う存在に慣れるよう頑張ります。よろしくお願いいたします。'
+                },
+                {
+                    id: 4,
+                    date: '12-27',
+                    title: 'おせちオードブル注文承り中',
+                    detail: '年の瀬ですね。新年の御食事にオレンジマートのオードブルはいかがですか？随時承っております。詳しくはスタッフまでお声かけください。'},
+            ],
+        }
+    }
+};
+</script>
