@@ -19,7 +19,7 @@
                     <div class="text">
                         <h3>お知らせ</h3>
                     </div>
-                    <v-container id="scroll-target" style="max-height: 200px" class="overflow-y-auto" >
+                    <v-container id="scroll-target" style="max-height: 200px" class="overflow-y-auto">
                         <News></News>
                     </v-container>
                 <div class="center">
