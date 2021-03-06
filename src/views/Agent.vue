@@ -28,7 +28,6 @@
             </v-row>
             <v-row>
                 <v-col cols="12" sm="12" md="12" lg="12">
-                    <Agent></Agent>
                 </v-col>
             </v-row>
         </v-container>
