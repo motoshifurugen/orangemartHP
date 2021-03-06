@@ -1,6 +1,6 @@
 <template>
     <div class="news">
-        <v-card v-for="letter in news_letters" :key="letter.id">
+        <v-card v-for="letter in reverseNewsLetters" :key="letter.id">
             <v-card-text>
                 <div>{{ letter.date }}</div>
                 <p class="display-1 text--primary">
@@ -12,11 +12,6 @@
                     {{ letter.detail }}
                 </div>
                 </v-list-item-content>
-                <v-list-item-actions>
-                <v-btn text color="deep-purple accent-4">
-                    詳しく見る
-                </v-btn>
-                </v-list-item-actions>
                 </v-list-item>
             </v-card-text>
         </v-card>
@@ -61,11 +56,16 @@ export default {
                 },
                 {
                     id: 4,
-                    date: '12-27',
+                    date: '2020-12-27',
                     title: 'おせちオードブル注文承り中',
                     detail: '年の瀬ですね。新年の御食事にオレンジマートのオードブルはいかがですか？随時承っております。詳しくはスタッフまでお声かけください。'},
             ],
         }
+    },
+    computed: {
+        reverseNewsLetters() {
+            return this.news_letters.slice().reverse();
+        },
     }
 };
 </script>
