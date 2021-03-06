@@ -1,7 +1,7 @@
 <template>
     <div class="leaflet">
         <h1>今週のチラシ</h1>
-        <img src="../assets/images/slider2.jpg" alt="スライダー2">
+        <img src="../assets/images/leaflet1.png" alt="チラシ">
     </div>
 </template>
 

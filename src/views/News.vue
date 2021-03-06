@@ -22,6 +22,9 @@
 .news {
     width: 100%;
 }
+.news p {
+    font-size: 1.5em !important;
+}
 .v-card--reveal {
     bottom: 0;
     opacity: 1 !important;
