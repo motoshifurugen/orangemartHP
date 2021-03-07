@@ -47,6 +47,11 @@ export default new Router({
             path: '/agent',
             name: 'agent',
             component: () => import('./views/Agent.vue')
-        }
+        },
+        {
+            path: '/admin',
+            name: 'admin',
+            component: () => import('./views/Admin.vue')
+        },
     ]
 })

@@ -4,10 +4,10 @@
             <v-row>
                 <v-col cols="12" sm="12" md="8" lg="8">
                     <swiper :options="swiperOption">
-                        <swiper-slide><img src="../assets/images/slider1.jpg" alt="スライダー1"></swiper-slide>
-                        <swiper-slide><img src="../assets/images/slider2.jpg" alt="スライダー2"></swiper-slide>
-                        <swiper-slide><img src="../assets/images/slider3.jpg" alt="スライダー3"></swiper-slide>
-                        <swiper-slide><img src="../assets/images/slider4.jpg" alt="スライダー4"></swiper-slide>
+                        <swiper-slide><img src="../assets/images/slider1.jpeg" alt="スライダー1"></swiper-slide>
+                        <swiper-slide><img src="../assets/images/slider2.jpeg" alt="スライダー2"></swiper-slide>
+                        <swiper-slide><img src="../assets/images/slider3.jpeg" alt="スライダー3"></swiper-slide>
+                        <swiper-slide><img src="../assets/images/slider4.jpeg" alt="スライダー4"></swiper-slide>
                     </swiper>
                 </v-col>
                 <v-col cols="12" sm="12" md="4" lg="4">
@@ -19,7 +19,7 @@
                     <div class="text">
                         <h3>お知らせ</h3>
                     </div>
-                    <v-container id="scroll-target" style="max-height: 200px" class="overflow-y-auto">
+                    <v-container id="scroll-target" style="max-height: 200px" class="overflow-y-auto news-box">
                         <News></News>
                     </v-container>
                 <div class="center">
@@ -50,9 +50,16 @@
     height: 300px;
     width: 100%;
 }
+@media screen and (max-width: 480px) {
+    /* 480px以下に適用されるCSS（スマホ用） */
+    .swiper-container {
+        height: 240px;
+        width: 100%;
+    }
+}
 .swiper-slide {
-    width:auto;
-    height:auto;
+    width: auto;
+    height: auto;
 }
 .swiper-container img {
     width:100%;
@@ -60,6 +67,11 @@
 }
 .top .text {
     text-align: center;
+}
+.news-box {
+    width: 96%;
+    border: solid 1px black;
+    margin: 1em;
 }
 </style>
 
