@@ -1,6 +1,7 @@
 <template>
     <div class="admin">
         <v-container>
+            {{ info }}
             <v-row>
                 <v-col cols="12" sm="12" md="6" lg="6">
                     <div class="text">
@@ -28,11 +29,22 @@
 <script>
 import Leaflet from './Leaflet.vue'
 import News from './News'
+import axios from 'axios'
 
 export default {
     components: {
         Leaflet,
         News
     },
+    data () {
+        return {
+            info: null
+        }
+    },
+    mounted () {
+        axios
+            .get('http://localhost:8000/api/letters')
+            .then(response => (this.info = response))
+    }
 }
 </script>
