@@ -43,14 +43,8 @@
           <td class="text-xs-center">{{ props.item.created_date }}</td>
           <td class="text-xs-center">{{ props.item.updated_date }}</td>
           <td class="justify-center layout px-0">
-            <!-- 編集ボタン -->
-            <v-icon class="mr-2" @click="editLetter(props.item.id)">
-              edit
-            </v-icon>
-            <!-- 削除ボタン -->
-            <v-icon @click="openDeleteDialog(props.item.id)">
-              delete
-            </v-icon>
+            <v-icon class="mr-2" @click="editLetter(props.item.id)">edit</v-icon>
+            <v-icon @click="openDeleteDialog(props.item.id)">delete</v-icon>
           </td>
         </template>
 
@@ -139,8 +133,9 @@ export default {
          { text: 'ID', align: 'center', value: 'id' },
          { text: 'タイトル', align: 'center', value: 'title' },
          { text: '本文', align: 'center', value: 'body' },
-         { text: '作成日', align: 'center', value: 'created_date' },
-         { text: '更新日', align: 'center', value: 'updated_date' }
+         { text: '作成日', align: 'center', value: 'created_at' },
+         { text: '更新日', align: 'center', value: 'updated_at' },
+         { text: '操作', align: 'center', value: 'action', sortable: false }
       ],
       // 選択中のレコードの値
       selectedLetter: {
@@ -175,7 +170,7 @@ export default {
     },
     // ユーザ作成
     createLetter (letterInfo) {
-      axios.post("http://localhost:8000/letters", letterInfo)
+      axios.post("http://localhost:8000/api/letters", letterInfo)
       .then( response => {
         console.log("Created : id=" + response.data.id);
       })
@@ -184,7 +179,7 @@ export default {
       });
     },
     // ユーザ編集(読み出し)
-    editUser (id) {
+    editLetter (id) {
       this.selectedLetter.id = id
       axios.get("http://localhost:8000/api/letter/" + id)
       .then( response => {
@@ -195,7 +190,7 @@ export default {
     },
     // ユーザ編集(書き込み)
     updateLetter (letterInfo) {
-      axios.patch("http://localhost:3000/users/" + letterInfo.id, letterInfo)
+      axios.patch("http://localhost:8000/api/letter/" + letterInfo.id, letterInfo)
       .then( response => {
         console.log("Updated : id=" + response.data.id);
       })

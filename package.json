@@ -10,6 +10,7 @@
     "mock:watch": "axios-mock-server -w"
   },
   "dependencies": {
+    "@mdi/font": "^5.9.55",
     "@vue/test-utils": "^1.1.2",
     "axios": "^0.21.0",
     "axios-mock-server": "^0.19.0",
