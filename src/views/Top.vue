@@ -11,7 +11,7 @@
                     </swiper>
                 </v-col>
                 <v-col cols="12" sm="12" md="4" lg="4">
-                    <router-link class="simple-link" to="/leaflet"><Leaflet></Leaflet></router-link>
+                    <router-link class="simple-link" to="/leaflet" style="text-decoration:none"><Leaflet></Leaflet></router-link>
                 </v-col>
             </v-row>
             <v-row>
@@ -28,7 +28,7 @@
                 </v-col>
             </v-row>
             <div class="text">
-                <h2>「鮮魚が美味しい！オレンジマート」</h2>
+                <h2>"キャッチコピー"</h2>
             </div>
             <v-row class="center">
                 <v-col cols="12" sm="12" md="6" lg="6">

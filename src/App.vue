@@ -5,7 +5,7 @@
             <v-list-item>
                 <v-list-item-content>
                     <v-list-item-title class="title grey--text text--darken-2">
-                        <router-link class="simple-link" to="/top">オレンジマート</router-link>
+                        <router-link class="simple-link" to="/top">オレンジマート（ロゴなど）</router-link>
                     </v-list-item-title>
                 </v-list-item-content>
             </v-list-item>
@@ -23,7 +23,7 @@
         </v-container>
       </v-navigation-drawer>
     <v-app-bar class="yellow darken-3" dark app>
-        <v-toolbar-title>オレンジマート</v-toolbar-title>
+        <v-toolbar-title>オレンジマート（ロゴなど）</v-toolbar-title>
         <v-spacer></v-spacer>
         <v-app-bar-nav-icon @click="side_menu=!side_menu"></v-app-bar-nav-icon>
     </v-app-bar>

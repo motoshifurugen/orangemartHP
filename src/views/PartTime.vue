@@ -63,7 +63,7 @@
                 <v-list>
                     <v-list-group
                         :value="true"
-                        prepend-icon="mdi-account-cash"
+                        prepend-icon="mdi-store"
                     >
                         <template v-slot:activator>
                             <v-list-item-title>立地情報</v-list-item-title>
@@ -109,7 +109,7 @@
                <v-list>
                     <v-list-group
                         :value="true"
-                        prepend-icon="mdi-account-cash"
+                        prepend-icon="mdi-phone"
                     >
                         <template v-slot:activator>
                             <v-list-item-title>代表お問い合わせ先</v-list-item-title>
