@@ -15,6 +15,7 @@
     "axios-mock-server": "^0.19.0",
     "core-js": "^3.6.5",
     "material-design-icons-iconfont": "^6.1.0",
+    "moment": "^2.29.1",
     "swiper": "5.x",
     "vue": "^2.6.11",
     "vue-awesome-swiper": "^4.1.1",
