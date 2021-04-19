@@ -5,7 +5,7 @@
             <v-list-item>
                 <v-list-item-content>
                     <v-list-item-title class="title grey--text text--darken-2">
-                        <router-link class="simple-link" to="/top">オレンジマート（ロゴなど）</router-link>
+                        <router-link class="simple-link" to="/">オレンジマート（ロゴなど）</router-link>
                     </v-list-item-title>
                 </v-list-item-content>
             </v-list-item>
@@ -78,7 +78,7 @@ export default {
             footer_lists: [
                 {
                     name: 'トップ',
-                    link: '/top',
+                    link: '/',
                 },
                 {
                     name: '会社情報',

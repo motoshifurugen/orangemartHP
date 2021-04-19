@@ -1,25 +1,26 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
 import TestPage from './components/Pages/TestPage.vue'
 
 Vue.use(Router)
 
 export default new Router({
     mode: 'history',
+    base: '/orange/',
     routes: [
-        {
-            path: '/',
-            name: 'home',
-            component: HelloWorld
-        },
+        // {
+        //     path: '/',
+        //     name: 'home',
+        //     component: HelloWorld
+        // },
         {
             path: '/test',
             name: 'test',
             component: TestPage
         },
         {
-            path: '/top',
+            path: '/',
             name: 'top',
             component: () => import('./views/Top.vue')
         },
