@@ -167,7 +167,7 @@ export default {
     // ユーザ一覧
     indexLetters () {
       this.letters = [];
-      axios.get("http://localhost:8000/api/letters")
+      axios.get("http://cocoahearts.xsrv.jp/api/letters")
       .then( response => {
         this.letters = response.data;
         console.log("Index : record num=" + this.letters.length);
@@ -175,7 +175,7 @@ export default {
     },
     // ユーザ作成
     createLetter (letterInfo) {
-      axios.post("http://localhost:8000/letters", letterInfo)
+      axios.post("http://cocoahearts.xsrv.jp/letters", letterInfo)
       .then( response => {
         console.log("Created : id=" + response.data.id);
       })
@@ -186,7 +186,7 @@ export default {
     // ユーザ編集(読み出し)
     editUser (id) {
       this.selectedLetter.id = id
-      axios.get("http://localhost:8000/api/letter/" + id)
+      axios.get("http://cocoahearts.xsrv.jp/api/letter/" + id)
       .then( response => {
         this.selectedLetter = response.data;
         console.log("Edit : id=" + this.selectedLetter.id);
@@ -195,7 +195,7 @@ export default {
     },
     // ユーザ編集(書き込み)
     updateLetter (letterInfo) {
-      axios.patch("http://localhost:3000/users/" + letterInfo.id, letterInfo)
+      axios.patch("http://cocoahearts.xsrv.jp/api/letter/" + letterInfo.id, letterInfo)
       .then( response => {
         console.log("Updated : id=" + response.data.id);
       })
@@ -210,7 +210,7 @@ export default {
     },
     // ユーザ削除
     deleteLetter () {
-      axios.delete("http://localhost:8000/api/letter/" + this.selectedLetter.id)
+      axios.delete("http://cocoahearts.xsrv.jp/api/letter/" + this.selectedLetter.id)
       .then( () => {
         this.indexLetters();
         this.close();

@@ -88,6 +88,10 @@ export default {
                     name: '採用',
                     link: '/part-time',
                 },
+                {
+                    name: '管理',
+                    link: '/admin',
+                },
             ],
         }
     }
