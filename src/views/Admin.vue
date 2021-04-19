@@ -43,7 +43,7 @@ export default {
     },
     mounted () {
         axios
-            .get('http://localhost:8000/api/letters')
+            .get('http://cocoahearts.xsrv.jp/api/letters')
             .then(response => (this.info = response))
     }
 }
