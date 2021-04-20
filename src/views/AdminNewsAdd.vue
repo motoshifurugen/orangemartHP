@@ -1,38 +1,34 @@
 <template>
-    <div class="admin">
-        <v-container>
-            <v-row>
-                <v-col cols="12" sm="12" md="6" lg="6">
-                    <div class="text">
-                        <h3>AdminNewsAdd</h3>
-                    </div>
-                    <v-container id="scroll-target" style="max-height: 200px" class="overflow-y-auto news-box">
-                        <News></News>
-                    </v-container>
-                    <div class="center">
-                        <v-btn to="/adminNews">お知らせ一覧へ</v-btn>
-                        <v-btn to="/adminNewsAdd">お知らせを作成する</v-btn>
-                    </div>
-                </v-col>
-                <v-col cols="12" sm="12" md="6" lg="6">
-                    <Leaflet></Leaflet>
-                    <div class="center">
-                        <v-btn to="#">新しいチラシをアップロードする</v-btn>
-                    </div>
-                </v-col>
-            </v-row>
-        </v-container>
+    <div>
+        <div>
+            <h4>お知らせ追加</h4>
+            <div>
+                <input v-model="title" type="text" name="title" placeholder="タイトル">
+                <textarea v-model="body" class="form-control" rows="4" placeholder="内容"></textarea>
+                <button v-on:click="postNews">投稿</button>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
-import Leaflet from './Leaflet.vue'
-import News from './News'
+import axios from 'axios';
 
-export default {
-    components: {
-        Leaflet,
-        News
-    },
-}
+    export default {
+        data() {
+            return {
+                title:'',
+                body:''
+            }
+        },
+        methods: {
+            postNews(){
+                var article = {
+                    'title': this.title,
+                    'body': this.body
+                }
+                axios.post('http://cocoahearts.xsrv.jp/api/letters', article).then(() => this.$router.push('/admin'));
+            }
+        }
+    }
 </script>
