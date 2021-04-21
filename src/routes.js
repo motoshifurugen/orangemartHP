@@ -1,24 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import HelloWorld from './components/HelloWorld.vue'
-import TestPage from './components/Pages/TestPage.vue'
 
 Vue.use(Router)
 
 export default new Router({
     mode: 'history',
-    base: '/orange/',
+    // base: '/orange/',
     routes: [
-        // {
-        //     path: '/',
-        //     name: 'home',
-        //     component: HelloWorld
-        // },
-        {
-            path: '/test',
-            name: 'test',
-            component: TestPage
-        },
         {
             path: '/',
             name: 'top',
@@ -55,9 +43,14 @@ export default new Router({
             component: () => import('./views/Admin.vue')
         },
         {
-            path: '/adminTest',
-            name: 'adminTest',
-            component: () => import('./views/AdminTest.vue')
+            path: '/adminNews',
+            name: 'adminNews',
+            component: () => import('./views/AdminNews.vue')
+        },
+        {
+            path: '/adminNewsAdd',
+            name: 'adminNewsAdd',
+            component: () => import('./views/AdminNewsAdd.vue')
         }
     ]
 })
