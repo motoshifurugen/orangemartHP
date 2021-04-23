@@ -10,9 +10,9 @@
                         <v-list-item-icon>
                             <v-icon v-text="charm.icon"></v-icon>
                         </v-list-item-icon>
-                        <v-list-item-content class="charm">
+                        <!-- <v-list-item-content class="charm"> -->
                             <v-list-item-title v-text="charm.text" class="charm-item"></v-list-item-title>
-                        </v-list-item-content>
+                        <!-- </v-list-item-content> -->
                     </v-list-item>
                 </v-list>
             <h2>募集情報</h2>
@@ -139,13 +139,14 @@ h2 {
     text-align: center;
     margin: 0.5em 0;
 }
-.charm {
+/* .charm {
     word-break: normal;
     overflow: scroll;
     padding: 0.1em 0;
-}
+} */
 .charm-item {
     word-break: normal;
+    overflow: scroll;
 }
 </style>
 
