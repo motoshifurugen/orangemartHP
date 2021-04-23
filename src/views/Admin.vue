@@ -11,7 +11,6 @@
                     </v-container>
                     <div class="center">
                         <v-btn to="/adminNews">お知らせ一覧へ</v-btn>
-                        <v-btn to="/adminNewsAdd">お知らせを作成する</v-btn>
                     </div>
                 </v-col>
                 <v-col cols="12" sm="12" md="6" lg="6">

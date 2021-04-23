@@ -1,8 +1,9 @@
 <template>
   <v-data-table
     :headers="headers"
-    :items="info.data"
+    :items="info"
     sort-by="id"
+    sort-desc
     class="elevation-1"
   >
     <template v-slot:top>
@@ -54,10 +55,10 @@
                     sm="12"
                     md="12"
                   >
-                    <v-text-field
+                    <v-textarea
                       v-model="editedItem.body"
                       label="内容"
-                    ></v-text-field>
+                    ></v-textarea>
                   </v-col>
                 </v-row>
               </v-container>
@@ -182,18 +183,18 @@ import moment from 'moment';
       initialize () {
         axios
             .get('http://cocoahearts.xsrv.jp/api/letters')
-            .then(response => (this.info = response))
+            .then(response => (this.info = response.data))
       },
 
       editItem (item) {
-        this.editedIndex = this.desserts.indexOf(item)
-        this.editedItem = Object.assign({}, item)
+        this.editedIndex = item.id
+        this.editedItem = item
         this.dialog = true
       },
 
       deleteItem (item) {
         this.editedIndex = item.id
-        this.editedItem = Object.assign({}, item)
+        this.editedItem = item
         this.dialogDelete = true
       },
 
@@ -221,9 +222,14 @@ import moment from 'moment';
 
       save () {
         if (this.editedIndex > -1) {
-          Object.assign(this.desserts[this.editedIndex], this.editedItem)
+          axios.put('http://cocoahearts.xsrv.jp/api/letters/'+this.editedIndex, {
+              title: this.editedItem.title,
+              body: this.editedItem.body
+          }).then(() => 
+            this.$router.go({path: this.$router.currentRoute.path, force: true}));
         } else {
-          this.desserts.push(this.editedItem)
+            axios.post('http://cocoahearts.xsrv.jp/api/letters', this.editedItem).then(() => 
+            this.$router.go({path: this.$router.currentRoute.path, force: true}));
         }
         this.close()
       },
