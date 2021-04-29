@@ -1,7 +1,7 @@
 <template>
     <div>
-        <v-container>
-            <h1>企業情報</h1>
+        <v-container class="about-agent">
+            <h2>企業情報</h2>
             <v-simple-table>
                 <template v-slot:default>
                     <tbody>
@@ -15,24 +15,24 @@
                     </tbody>
                 </template>
             </v-simple-table>
+            <br>
             <v-row class="center">
-                <v-col cols="12" sm="12" md="4" lg="4">
-                    <v-btn to="#" x-large color="light-blue accent-4" block>オレンジマート</v-btn>
+                <v-col cols="0" sm="0" md="3" lg="3"></v-col>
+                <v-col cols="12" sm="12" md="6" lg="6">
+                    <v-btn href="http://umintyu-water.com/" target="_blank" x-large color="blue accent-4" block class="white--text"><b>ウォーターサーバー「海人ぬ宝」</b></v-btn>
                 </v-col>
-                <v-col cols="12" sm="12" md="4" lg="4">
-                    <v-btn to="#" x-large color="light-blue accent-4" block>割烹料理</v-btn>
-                </v-col>
-                <v-col cols="12" sm="12" md="4" lg="4">
-                    <v-btn to="#" x-large color="light-blue accent-4" block>ウォーターサーバー</v-btn>
-                </v-col>
-            </v-row>
-            <v-row>
-                <v-col cols="12" sm="12" md="12" lg="12">
-                </v-col>
+                <v-col cols="0" sm="0" md="3" lg="3"></v-col>
             </v-row>
         </v-container>
     </div>
 </template>
+
+<style scoped>
+.about-mart h2 {
+    text-align:center;
+    margin-bottom: 0.25em;
+}
+</style>
 
 <script>
   export default {

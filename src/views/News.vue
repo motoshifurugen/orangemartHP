@@ -7,11 +7,11 @@
                     {{ news["title"] }}
                 </p>
                 <v-list-item>
-                <v-list-item-content>
-                <div class="text--primary">
-                    {{ news["body"] }}
-                </div>
-                </v-list-item-content>
+                    <v-list-item-content>
+                        <div class="text--primary">
+                            {{ news["body"] }}
+                        </div>
+                    </v-list-item-content>
                 </v-list-item>
             </v-card-text>
         </v-card>
@@ -25,11 +25,18 @@
 .news p {
     font-size: 1.5em !important;
 }
+.v-card {
+    border: 1px solid orange;
+    margin: 0.5em;
+}
 .v-card--reveal {
     bottom: 0;
     opacity: 1 !important;
     position: absolute;
     width: 100%;
+}
+.display-1 {
+    border-bottom: 1px dotted gray;
 }
 </style>
 
