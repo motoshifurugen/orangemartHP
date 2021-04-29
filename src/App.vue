@@ -98,6 +98,10 @@ export default {
                 //     name: '管理',
                 //     link: '/admin',
                 // },
+                {
+                    name: 'お知らせ管理',
+                    link: '/adminNews',
+                },
             ],
         }
     }
