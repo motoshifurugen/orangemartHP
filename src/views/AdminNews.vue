@@ -122,6 +122,12 @@
   </v-data-table>
 </template>
 
+<style scoped>
+.headline {
+  font-size: 1em !important;
+}
+</style>
+
 <script>
 import axios from 'axios';
 import moment from 'moment';

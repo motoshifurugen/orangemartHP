@@ -17,25 +17,25 @@
             <v-row>
                 <v-col cols="12" sm="12" md="12" lg="12">
                     <div class="text">
-                        <h3>お知らせ</h3>
+                        <h2>お知らせ</h2>
                     </div>
                     <v-container id="scroll-target" style="max-height: 200px" class="overflow-y-auto news-box">
                         <News></News>
                     </v-container>
-                <div class="center">
-                    <v-btn to="/news">お知らせ一覧へ</v-btn>
+                <div class="right">
+                    <v-btn to="/news" class="news-btn"><v-icon>mdi-email</v-icon>お知らせ一覧へ</v-btn>
                 </div>
                 </v-col>
             </v-row>
-            <div class="text">
-                <h2>"キャッチコピー"</h2>
+            <div class="text text-p">
+                <p>オレンジマートでは、一緒に働いてくれる仲間を随時募集中です！</p>
             </div>
             <v-row class="center">
                 <v-col cols="12" sm="12" md="6" lg="6">
-                    <v-btn to="/about" x-large color="light-blue accent-4" block>店舗情報・営業時間</v-btn>
+                    <v-btn to="/about" x-large color="light-blue accent-4" block class="white--text"><b>店舗情報・営業時間</b></v-btn>
                 </v-col>
                 <v-col cols="12" sm="12" md="6" lg="6">
-                    <v-btn to="/part-time" x-large color="green accent-4" block>アルバイト・パート採用情報</v-btn>
+                    <v-btn to="/part-time" x-large color="green accent-4" block class="white--text"><b>アルバイト・パート採用情報</b></v-btn>
                 </v-col>
             </v-row>
         </v-container>
@@ -45,6 +45,9 @@
 <style scoped>
 .top .center{
     text-align: center;
+}
+.right {
+    text-align: right;
 }
 .swiper-container {
     height: 300px;
@@ -65,13 +68,23 @@
     width:100%;
     height:auto;
 }
-.top .text {
+.top .text{
     text-align: center;
 }
+.text-p {
+    margin: 1em 0;
+}
 .news-box {
-    width: 96%;
-    border: solid 1px black;
-    margin: 1em;
+    width: 98%;
+    border: solid 3px orange;
+    border-radius: 0.5rem;
+    padding: 0.1em;
+}
+.news-btn {
+    background-color: orange !important;
+    color: white;
+    padding:0;
+    margin-right: 0.5em;
 }
 </style>
 

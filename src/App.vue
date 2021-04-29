@@ -5,7 +5,7 @@
             <v-list-item>
                 <v-list-item-content>
                     <v-list-item-title class="title grey--text text--darken-2">
-                        <router-link class="simple-link" to="/">オレンジマート（ロゴなど）</router-link>
+                        <router-link class="simple-link menu-top" to="/"><b>オレンジマート</b></router-link>
                     </v-list-item-title>
                 </v-list-item-content>
             </v-list-item>
@@ -23,7 +23,7 @@
         </v-container>
       </v-navigation-drawer>
     <v-app-bar class="yellow darken-3" dark app>
-        <v-toolbar-title>オレンジマート（ロゴなど）</v-toolbar-title>
+        <v-toolbar-title>オレンジマート</v-toolbar-title>
         <v-spacer></v-spacer>
         <v-app-bar-nav-icon @click="side_menu=!side_menu"></v-app-bar-nav-icon>
     </v-app-bar>
@@ -43,9 +43,15 @@
   </v-app>
 </template>
 
-<style scoped>
+<style>
 #app .simple-link {
     text-decoration: none;
+}
+#app .col-sm-12 {
+    padding: 10px !important;
+}
+.menu-top {
+    color:orange !important;
 }
 </style>
 
@@ -71,7 +77,7 @@ export default {
                     link: '/about'
                 },
                 {
-                    name: 'アルバイト採用',
+                    name: 'アルバイト',
                     icon: 'mdi-account',
                     link: '/part-time'},
             ],
@@ -85,12 +91,16 @@ export default {
                     link: '/agent',
                 },
                 {
-                    name: '採用',
+                    name: 'アルバイト',
                     link: '/part-time',
                 },
+                // {
+                //     name: '管理',
+                //     link: '/admin',
+                // },
                 {
-                    name: '管理',
-                    link: '/admin',
+                    name: 'お知らせ管理',
+                    link: '/adminNews',
                 },
             ],
         }
