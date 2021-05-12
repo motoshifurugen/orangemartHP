@@ -35,6 +35,7 @@
             <v-btn v-for="list in footer_lists" :key="list.name" :to="list.link" class="yellow darken-3" color="white" text>
                 {{ list.name }}
             </v-btn>
+            <div v-if="show"><Login ></Login></div>
             <v-col class="yellow darken-3 py-4 text-center white--text" cols="12" >
                 {{ new Date().getFullYear() }} — <strong>株式会社大倉企画</strong>
             </v-col>
@@ -56,10 +57,16 @@
 </style>
 
 <script>
+import Login from './components/Login'
+
 export default {
+    components: {
+        Login
+    },
     data(){
         return{
             side_menu: null,
+            show: null,
             nav_lists:[
                 {
                     name: '今週のチラシ',
@@ -98,12 +105,28 @@ export default {
                 //     name: '管理',
                 //     link: '/admin',
                 // },
-                {
-                    name: 'お知らせ管理',
-                    link: '/adminNews',
-                },
+                // {
+                //     name: 'お知らせ管理',
+                //     link: '/adminNews',
+                // },
             ],
         }
-    }
+    },
+    methods: {
+        handleResize: function() {
+            if (window.innerWidth >= 1000) {
+                this.show = true
+            } else {
+                this.show = false
+            }
+        },
+    },
+    created() {
+        window.addEventListener('resize', this.handleResize)
+        this.handleResize()
+        },
+    destroyed() {
+        window.removeEventListener('resize', this.handleResize)
+    },
 };
 </script>
