@@ -6,7 +6,7 @@ Vue.use(Router)
 export default new Router({
     mode: 'history',
     // ↓本番で適用
-    base: '/orange/',
+    // base: '/orange/',
     routes: [
         {
             path: '/',
