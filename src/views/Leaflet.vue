@@ -2,7 +2,7 @@
     <div class="leaflet">
         <div class="middle">
             <h1>今週のチラシ</h1>
-            <img src="../assets/images/leaflet1.png" alt="チラシ">
+            <img v-bind:src="leaflet.file_path" alr="チラシ">
         </div>
     </div>
 </template>
@@ -23,3 +23,19 @@
     height: auto;
 }
 </style>
+
+<script>
+import axios from 'axios';
+    export default {
+        data() {
+            return {
+                leaflet: '',
+            };
+      },
+      mounted () {
+        axios
+            .get('http://cocoahearts.xsrv.jp/api/upload')
+            .then(response => (this.leaflet = response.data))
+      },
+    }
+</script>

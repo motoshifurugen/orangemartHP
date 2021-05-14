@@ -3,5 +3,5 @@ module.exports = {
     "vuetify",
     // "vue-awesome-swiper",
   ],
-  publicPath: './'
+  publicPath: '/orange/'
 }
