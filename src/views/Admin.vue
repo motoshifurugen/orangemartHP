@@ -10,14 +10,13 @@
                         <News></News>
                     </v-container>
                     <div class="center">
-                        <v-btn to="/adminNews">お知らせ一覧へ</v-btn>
+                        <v-btn to="/adminNews" class="orange--text">お知らせ追加・編集ページへ</v-btn>
                     </div>
                 </v-col>
                 <v-col cols="12" sm="12" md="6" lg="6">
                     <Leaflet></Leaflet>
                     <div class="center">
                         <Upload></Upload>
-                        <v-btn to="#">新しいチラシをアップロードする</v-btn>
                     </div>
                 </v-col>
             </v-row>

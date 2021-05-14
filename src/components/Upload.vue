@@ -1,39 +1,40 @@
 <template>
-    <div class="content">
-        <h1>チラシ登録</h1>
+    <div class="upload">
+        <h2>チラシ登録</h2>
         <v-file-input accept="image/*" label="File input" type="file" @change="fileSelected"></v-file-input>
-        <v-btn color="orange" @click="upload();">
-            アップロード
+        <v-btn color="orange white--text" @click="upload();" v-show="showUploadButton">
+            <b>アップロード</b>
         </v-btn>
     </div>
 </template>
+
+<style scoped>
+.upload {
+    margin-top: 4em;
+}
+</style>
 
 <script>
 import axios from 'axios';
     export default {
         data() {
             return {
-                fileinfo: ''
+                fileinfo: '',
+                showUploadButton: false
             };
       },
       methods: {
           fileSelected(file) {
-            console.log(file);
             this.fileInfo = file;
+            if (file) this.showUploadButton = true;
           },
           upload: function() {
             const formData = new FormData()
             formData.append('file',this.fileInfo)
             axios.post('http://cocoahearts.xsrv.jp/api/upload', formData).then(response =>{
-                console.log(response)
+                if(response.data.file_path) this.$router.go({path: this.$router.currentRoute.path, force: true});
             });
         },
       },
     }
 </script>
-
-<style>
-.content{
-    margin:5em;
-}
-</style>

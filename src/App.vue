@@ -115,7 +115,11 @@ export default {
     methods: {
         handleResize: function() {
             if (window.innerWidth >= 1000) {
-                this.show = true
+                if (this.$route.path === '/admin' || this.$route.path === '/adminNews') {
+                    this.show = false
+                } else {
+                    this.show = true
+                }
             } else {
                 this.show = false
             }
