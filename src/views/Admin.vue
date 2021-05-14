@@ -16,6 +16,7 @@
                 <v-col cols="12" sm="12" md="6" lg="6">
                     <Leaflet></Leaflet>
                     <div class="center">
+                        <Upload></Upload>
                         <v-btn to="#">新しいチラシをアップロードする</v-btn>
                     </div>
                 </v-col>
@@ -28,11 +29,13 @@
 import Leaflet from './Leaflet.vue'
 import News from './News'
 import axios from 'axios'
+import Upload from '../components/Upload'
 
 export default {
     components: {
         Leaflet,
-        News
+        News,
+        Upload
     },
     data () {
         return {
