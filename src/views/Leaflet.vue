@@ -34,7 +34,7 @@ import axios from 'axios';
       },
       mounted () {
         axios
-            .get('http://cocoahearts.xsrv.jp/api/upload')
+            .get('http://xs199209.xsrv.jp/api/upload')
             .then(response => (this.leaflet = response.data))
       },
     }
