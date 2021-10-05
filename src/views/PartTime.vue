@@ -89,7 +89,7 @@
                             <v-list-item-title>応募方法</v-list-item-title>
                         </template>
                         <v-list-item class="indent">
-                            応募には以下の２つの方法があります。<br />①このページ下部にある「申し込み」ボタンを押して、申し込みフォームを送信する。<br />②代表お問い合わせ先に電話で連絡する。
+                            代表お問い合わせ先に電話で連絡する。
                         </v-list-item>
                    </v-list-group>
                </v-list>
@@ -102,7 +102,7 @@
                             <v-list-item-title>応募後のプロセス</v-list-item-title>
                         </template>
                         <v-list-item class="indent">
-                            申し込み後1週間以内に、代表からお電話で連絡します。<br />その際に面接日を決定してもらい、店舗で面接をします。<br />面接後１週間以内に可否の連絡をします。
+                            電話で面接日を決定し、店舗で面接をします。<br />面接後１週間以内に可否の連絡をします。
                         </v-list-item>
                     </v-list-group>
                </v-list>
@@ -120,7 +120,7 @@
                     </v-list-group>
                 </v-list>
             </v-card>
-            <v-btn to="#" x-large color="blue accent-4" block class="white--text">申し込みフォーム</v-btn>
+            <!-- <v-btn to="#" x-large color="blue accent-4" block class="white--text">申し込みフォーム</v-btn> -->
         </v-container>
     </div>
 </template>
@@ -154,7 +154,6 @@ h3 {
 } */
 .charm-item {
     word-break: normal;
-    overflow: scroll;
 }
 </style>
 

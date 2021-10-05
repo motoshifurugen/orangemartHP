@@ -1,6 +1,6 @@
 <template>
   <v-app>
-      <v-navigation-drawer app v-model="side_menu">
+      <v-navigation-drawer app v-model="side_menu" right>
           <v-container>
             <v-list-item>
                 <v-list-item-content>
