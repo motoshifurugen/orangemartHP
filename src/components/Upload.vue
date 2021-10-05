@@ -31,7 +31,7 @@ import axios from 'axios';
           upload: function() {
             const formData = new FormData()
             formData.append('file',this.fileInfo)
-            axios.post('http://cocoahearts.xsrv.jp/api/upload', formData).then(response =>{
+            axios.post('http://xs199209.xsrv.jp/api/upload', formData).then(response =>{
                 if(response.data.file_path) this.$router.go({path: this.$router.currentRoute.path, force: true});
             });
         },
