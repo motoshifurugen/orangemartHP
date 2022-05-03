@@ -85,7 +85,7 @@
 @media screen and (max-width: 480px) {
     /* 480px以下に適用されるCSS（スマホ用） */
     .swiper-container {
-        height: 240px;
+        height: 150px;
         width: 100%;
     }
 }
@@ -139,6 +139,7 @@ export default {
             swiperOption: {
                 speed: 1000,//スライドの切り替わりスピード
                 spaceBetween: 20,//各スライドの余白
+                slidesPerView: 1.5, // 左右の画像のはみ出し
                 centeredSlides: true,//スライダーを真ん中に
                 loop: true, //無限ループ
                 autoplay: { //スライドの自動切り替え
