@@ -3,7 +3,7 @@
         <v-container>
             <v-breadcrumbs :items="items" class="breadcrumb"></v-breadcrumbs>
             <div class="middle">
-                <h1>今週のチラシ</h1>
+                <h1>{{ leaflet["updated_at"] | moment }}更新のチラシ</h1>
                 <img v-bind:src="leaflet.file_path" alr="チラシ">
             </div>
         </v-container>
@@ -28,6 +28,8 @@
 
 <script>
 import axios from 'axios';
+import moment from 'moment';
+
 export default {
     data() {
         return {
@@ -51,5 +53,10 @@ export default {
             .get('http://xs199209.xsrv.jp/api/upload')
             .then(response => (this.leaflet = response.data))
     },
+    filters: {
+        moment(date) {
+            return moment(date).format('M月D日');
+        },
+    }
 }
 </script>

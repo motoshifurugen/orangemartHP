@@ -41,7 +41,7 @@
                 </v-col>
                 <v-col cols="12" sm="12" md="4" lg="4">
                     <router-link to="/leaflet" target="_blank">
-                        <v-img src="../assets/images/leaflet-bannar.png"></v-img>
+                        <v-img src="../assets/images/leaflet-bannar.png" rounded></v-img>
                     </router-link>
                 </v-col>
             </v-row>
