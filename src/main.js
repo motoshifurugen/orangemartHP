@@ -11,5 +11,6 @@ new Vue({
     router,
     vuetify,
     VueAwesomeSwiper,
-    render: h => h(App)
+    render: h => h(App),
+    created: () => (document.documentElement.setAttribute('lang', 'ja')),
 }).$mount('#app')
