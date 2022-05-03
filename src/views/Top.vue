@@ -50,8 +50,19 @@
                     <div class="text">
                         <h2>お知らせ</h2>
                     </div>
-                    <v-container id="scroll-target" style="max-height: 200px" class="overflow-y-auto news-box">
-                        <News></News>
+                    <v-container id="scroll-target" class="overflow-y-auto news-box">
+                        <v-list disabled>
+                            <v-list-item-group>
+                                <v-list-item v-for="news in info" :key="news.id">
+                                    <v-list-item-icon>
+                                        {{ news["created_at"] | moment }}
+                                    </v-list-item-icon>
+                                    <v-list-item-content>
+                                        {{ news["title"] }}
+                                    </v-list-item-content>
+                                </v-list-item>
+                            </v-list-item-group>
+                        </v-list>
                     </v-container>
                 <div class="right">
                     <v-btn to="/news" class="news-btn"><v-icon>mdi-email</v-icon>お知らせ一覧へ</v-btn>
@@ -121,15 +132,14 @@
 
 <script>
 import { Swiper, SwiperSlide, directive } from 'vue-awesome-swiper'
-import News from './News'
-
 import 'swiper/css/swiper.css'
+import axios from 'axios';
+import moment from 'moment';
 
 export default {
     components: {
         Swiper,
         SwiperSlide,
-        News
     },
     directives: {
         swiper: directive
@@ -146,8 +156,26 @@ export default {
                     delay: 5000,//スライドの自動切り替えの秒数
                     disableOnInteraction: false//何らかのアクション後の自動切り替えを再開
                 }
-            }
+            },
+            items: [
+                { text: 'Real-Time', icon: 'mdi-clock' },
+                { text: 'Audience', icon: 'mdi-account' },
+                { text: 'Conversions', icon: 'mdi-flag' },
+            ],
+            info: null,
         }
+    },
+    mounted () {
+        axios
+            .get('http://xs199209.xsrv.jp/api/letters')
+            .then(response => (
+                this.info = response.data.reverse().slice(0,3)
+            ));
+    },
+    filters: {
+        moment(date) {
+            return moment(date).format('YYYY/MM/DD');
+        },
     }
 }
 </script>
