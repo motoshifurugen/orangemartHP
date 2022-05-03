@@ -18,6 +18,7 @@
                         outlined
                         block
                         to="/about"
+                        class="font-weight-black"
                     >店舗情報</v-btn>
                 </v-col>
                 <v-col cols="4" xs="4" sm="4" md="4" lg="4">
@@ -27,6 +28,7 @@
                         outlined
                         block
                         to="/part-time"
+                        class="font-weight-black"
                     >採用情報</v-btn>
                 </v-col>
             </v-row>
@@ -74,10 +76,26 @@
             </div>
             <v-row class="center">
                 <v-col cols="12" sm="12" md="6" lg="6">
-                    <v-btn to="/about" x-large color="light-blue accent-4" block class="white--text"><b>店舗情報・営業時間</b></v-btn>
+                    <v-btn
+                        color="primary"
+                        elevation="0"
+                        outlined
+                        block
+                        x-large
+                        to="/about"
+                        class="font-weight-black"
+                    >店舗情報・営業時間</v-btn>
                 </v-col>
                 <v-col cols="12" sm="12" md="6" lg="6">
-                    <v-btn to="/part-time" x-large color="green accent-4" block class="white--text"><b>アルバイト・パート採用情報</b></v-btn>
+                    <v-btn
+                        color="teal"
+                        elevation="0"
+                        outlined
+                        block
+                        x-large
+                        to="/part-time"
+                        class="font-weight-black"
+                    >アルバイト・パート採用情報</v-btn>
                 </v-col>
             </v-row>
         </v-container>
