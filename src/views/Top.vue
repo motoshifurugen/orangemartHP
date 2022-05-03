@@ -1,6 +1,35 @@
 <template>
     <div class="top">
         <v-container>
+            <v-row class="center">
+                <v-col cols="4" xs="4" sm="4" md="4" lg="4">
+                    <v-btn
+                        color="red"
+                        elevation="0"
+                        outlined
+                        block
+                        to="/leaflet"
+                    >チラシ</v-btn>
+                </v-col>
+                <v-col cols="4" xs="4" sm="4" md="4" lg="4">
+                    <v-btn
+                        color="primary"
+                        elevation="0"
+                        outlined
+                        block
+                        to="/about"
+                    >店舗情報</v-btn>
+                </v-col>
+                <v-col cols="4" xs="4" sm="4" md="4" lg="4">
+                    <v-btn
+                        color="teal"
+                        elevation="0"
+                        outlined
+                        block
+                        to="/part-time"
+                    >採用情報</v-btn>
+                </v-col>
+            </v-row>
             <v-row>
                 <v-col cols="12" sm="12" md="8" lg="8">
                     <swiper :options="swiperOption">
