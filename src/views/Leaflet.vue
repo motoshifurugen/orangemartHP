@@ -50,7 +50,7 @@ export default {
     },
     mounted () {
         axios
-            .get('http://xs199209.xsrv.jp/api/upload')
+            .get('https://xs199209.xsrv.jp/api/upload')
             .then(response => (this.leaflet = response.data));
         const title = "チラシ | オレンジマート"
         const description = "オレンジマートオークラのお得情報が詰まったチラシを掲載します。"

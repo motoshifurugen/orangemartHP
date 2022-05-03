@@ -185,7 +185,7 @@ export default {
     },
     mounted () {
         axios
-            .get('http://xs199209.xsrv.jp/api/letters')
+            .get('https://xs199209.xsrv.jp/api/letters')
             .then(response => (
                 this.info = response.data.reverse().slice(0,3)
             ));

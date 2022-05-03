@@ -73,7 +73,7 @@ export default {
       }
       axios
         .post(
-          'http://xs199209.xsrv.jp/api/login', user)
+          'https://xs199209.xsrv.jp/api/login', user)
         .then(response => {
           console.log(response);
           if (response["data"] == 'login!') {

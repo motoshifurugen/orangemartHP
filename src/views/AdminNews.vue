@@ -194,7 +194,7 @@ import moment from 'moment';
     methods: {
       initialize () {
         axios
-            .get('http://xs199209.xsrv.jp/api/letters')
+            .get('https://xs199209.xsrv.jp/api/letters')
             .then(response => (this.info = response.data))
       },
 
@@ -211,7 +211,7 @@ import moment from 'moment';
       },
 
       deleteItemConfirm () {
-        axios.delete('http://xs199209.xsrv.jp/api/letters/'+this.editedIndex).then(() => 
+        axios.delete('https://xs199209.xsrv.jp/api/letters/'+this.editedIndex).then(() => 
             this.$router.go({path: this.$router.currentRoute.path, force: true}));
             this.closeDelete()
       },
@@ -234,13 +234,13 @@ import moment from 'moment';
 
       save () {
         if (this.editedIndex > -1) {
-          axios.put('http://xs199209.xsrv.jp/api/letters/'+this.editedIndex, {
+          axios.put('https://xs199209.xsrv.jp/api/letters/'+this.editedIndex, {
               title: this.editedItem.title,
               body: this.editedItem.body
           }).then(() => 
             this.$router.go({path: this.$router.currentRoute.path, force: true}));
         } else {
-            axios.post('http://xs199209.xsrv.jp/api/letters', this.editedItem).then(() => 
+            axios.post('https://xs199209.xsrv.jp/api/letters', this.editedItem).then(() => 
             this.$router.go({path: this.$router.currentRoute.path, force: true}));
         }
         this.close()

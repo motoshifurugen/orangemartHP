@@ -27,7 +27,7 @@ import axios from 'axios';
                     'title': this.title,
                     'body': this.body
                 }
-                axios.post('http://xs199209.xsrv.jp/api/letters', article).then(() => this.$router.push('/admin'));
+                axios.post('https://xs199209.xsrv.jp/api/letters', article).then(() => this.$router.push('/admin'));
             }
         }
     }
