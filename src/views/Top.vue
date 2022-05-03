@@ -40,7 +40,9 @@
                     </swiper>
                 </v-col>
                 <v-col cols="12" sm="12" md="4" lg="4">
-                    <router-link class="simple-link" to="/leaflet" style="text-decoration:none"><Leaflet></Leaflet></router-link>
+                    <router-link to="/leaflet" target="_blank">
+                        <v-img src="../assets/images/leaflet-bannar.png"></v-img>
+                    </router-link>
                 </v-col>
             </v-row>
             <v-row>
@@ -119,7 +121,6 @@
 
 <script>
 import { Swiper, SwiperSlide, directive } from 'vue-awesome-swiper'
-import Leaflet from './Leaflet.vue'
 import News from './News'
 
 import 'swiper/css/swiper.css'
@@ -128,7 +129,6 @@ export default {
     components: {
         Swiper,
         SwiperSlide,
-        Leaflet,
         News
     },
     directives: {
