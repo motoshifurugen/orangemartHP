@@ -1,20 +1,23 @@
 <template>
     <div class="news">
-        <v-card v-for="news in info" :key="news.id">
-            <v-card-text>
-                <div>{{ news["created_at"] | moment }}</div>
-                <p class="display-1 text--primary">
-                    {{ news["title"] }}
-                </p>
-                <v-list-item>
-                    <v-list-item-content>
-                        <div class="text--primary">
-                            {{ news["body"] }}
-                        </div>
-                    </v-list-item-content>
-                </v-list-item>
-            </v-card-text>
-        </v-card>
+        <v-container>
+            <v-breadcrumbs :items="items" class="breadcrumb"></v-breadcrumbs>
+            <v-card v-for="news in info" :key="news.id">
+                <v-card-text>
+                    <div>{{ news["created_at"] | moment }}</div>
+                    <p class="display-1 text--primary">
+                        {{ news["title"] }}
+                    </p>
+                    <v-list-item>
+                        <v-list-item-content>
+                            <div class="text--primary">
+                                {{ news["body"] }}
+                            </div>
+                        </v-list-item-content>
+                    </v-list-item>
+                </v-card-text>
+            </v-card>
+        </v-container>
     </div>
 </template>
 
@@ -49,6 +52,18 @@ export default {
         return{
             reveal: false,
             info: null,
+            items: [
+            {
+                text: "トップ",
+                disabled: false,
+                href: '/orange/',
+            },
+            {
+                text: "お知らせ",
+                disabled: true,
+                href: '/orange/news',
+            },
+            ]
         }
     },
     mounted () {

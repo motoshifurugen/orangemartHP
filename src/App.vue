@@ -22,7 +22,7 @@
             </v-list>
         </v-container>
       </v-navigation-drawer>
-    <v-app-bar class="yellow darken-3" dark app>
+    <v-app-bar elevation="1" class="yellow darken-3" dark app>
         <v-toolbar-title>オレンジマート</v-toolbar-title>
         <v-spacer></v-spacer>
         <v-app-bar-nav-icon @click="side_menu=!side_menu"></v-app-bar-nav-icon>
@@ -53,6 +53,9 @@
 }
 .menu-top {
     color:orange !important;
+}
+.breadcrumb {
+    padding: 10px 0 !important;
 }
 </style>
 

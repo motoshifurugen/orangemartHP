@@ -11,7 +11,7 @@
                         >
                             <td>{{ item.name }}</td>
                             <td>{{ item.data }}</td>
-                      </tr>
+                        </tr>
                     </tbody>
                 </template>
             </v-simple-table>
@@ -35,36 +35,36 @@
 </style>
 
 <script>
-  export default {
+export default {
     data () {
-      return {
-        desserts: [
-          {
-            name: '社名',
-            data: '株式会社大倉',
-          },
-          {
-            name: '住所',
-            data: '東京都豊島区雑司ヶ谷3-12-2',
-          },
-          {
-            name: 'TEL',
-            data: '(03)3983-7912',
-          },
-          {
-            name: 'FAX',
-            data: '(03)3983-7913',
-          },
-          {
-            name: '設立',
-            data: '平成18年6月2日',
-          },
-          {
-            name: '主任',
-            data: '秋間広海',
-          },
-        ],
-      }
+        return {
+            desserts: [
+            {
+                name: '社名',
+                data: '株式会社大倉',
+            },
+            {
+                name: '住所',
+                data: '東京都豊島区雑司ヶ谷3-12-2',
+            },
+            {
+                name: 'TEL',
+                data: '(03)3983-7912',
+            },
+            {
+                name: 'FAX',
+                data: '(03)3983-7913',
+            },
+            {
+                name: '設立',
+                data: '平成18年6月2日',
+            },
+            {
+                name: '主任',
+                data: '秋間広海',
+            }
+            ],
+        }
     },
-  }
+}
 </script>

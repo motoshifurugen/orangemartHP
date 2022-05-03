@@ -1,6 +1,7 @@
 <template>
     <div class="part-time">
         <v-container>
+            <v-breadcrumbs :items="items" class="breadcrumb"></v-breadcrumbs>
             <h2>アルバイト募集中</h2>
                 <v-list disabled class="point">
                     <v-list-item
@@ -158,23 +159,35 @@ h3 {
 </style>
 
 <script>
-  export default {
+export default {
     data: () => ({
-      charms: [
-        { text: '未経験でも大歓迎！', icon: 'mdi-check-circle' },
-        { text: 'シフト制だからスキマ時間に！', icon: 'mdi-check-circle' },
-        { text: '福利厚生もばっちり！', icon: 'mdi-check-circle' },
-      ],
-      admins: [
-        ['Management', 'mdi-account-multiple-outline'],
-        ['Settings', 'mdi-cog-outline'],
-      ],
-      cruds: [
-        ['Create', 'mdi-plus-outline'],
-        ['Read', 'mdi-file-outline'],
-        ['Update', 'mdi-update'],
-        ['Delete', 'mdi-delete'],
-      ],
+        charms: [
+            { text: '未経験でも大歓迎！', icon: 'mdi-check-circle' },
+            { text: 'シフト制だからスキマ時間に！', icon: 'mdi-check-circle' },
+            { text: '福利厚生もばっちり！', icon: 'mdi-check-circle' },
+        ],
+        admins: [
+            ['Management', 'mdi-account-multiple-outline'],
+            ['Settings', 'mdi-cog-outline'],
+        ],
+        cruds: [
+            ['Create', 'mdi-plus-outline'],
+            ['Read', 'mdi-file-outline'],
+            ['Update', 'mdi-update'],
+            ['Delete', 'mdi-delete'],
+        ],
+        items: [
+            {
+                text: "トップ",
+                disabled: false,
+                href: '/orange/',
+            },
+            {
+                text: "アルバイト募集情報",
+                disabled: true,
+                href: '/orange/part-time',
+            },
+        ]
     }),
-  }
+}
 </script>
