@@ -28,8 +28,8 @@
 </template>
 
 <style scoped>
-.about-mart h2 {
-    text-align:center;
+.about-agent h2 {
+    text-align: center;
     margin-bottom: 0.25em;
 }
 </style>

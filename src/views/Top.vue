@@ -33,10 +33,10 @@
             <v-row>
                 <v-col cols="12" sm="12" md="8" lg="8">
                     <swiper :options="swiperOption">
-                        <swiper-slide><img src="../assets/images/slider1.jpeg" alt="スライダー1"></swiper-slide>
-                        <swiper-slide><img src="../assets/images/slider2.jpeg" alt="スライダー2"></swiper-slide>
-                        <swiper-slide><img src="../assets/images/slider3.jpeg" alt="スライダー3"></swiper-slide>
-                        <swiper-slide><img src="../assets/images/slider4.jpeg" alt="スライダー4"></swiper-slide>
+                        <swiper-slide><img src="../assets/images/slider1.png" alt="スライダー1"></swiper-slide>
+                        <swiper-slide><img src="../assets/images/slider2.png" alt="スライダー2"></swiper-slide>
+                        <swiper-slide><img src="../assets/images/slider3.png" alt="スライダー3"></swiper-slide>
+                        <swiper-slide><img src="../assets/images/slider4.png" alt="スライダー4"></swiper-slide>
                     </swiper>
                 </v-col>
                 <v-col cols="12" sm="12" md="4" lg="4">

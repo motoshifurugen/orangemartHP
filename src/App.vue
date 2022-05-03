@@ -45,6 +45,12 @@
 </template>
 
 <style>
+@media screen and (min-width: 1904px) {
+    /* 480px以下に適用されるCSS（スマホ用） */
+    .container {
+        max-width: 70%;
+    }
+}
 #app .simple-link {
     text-decoration: none;
 }
