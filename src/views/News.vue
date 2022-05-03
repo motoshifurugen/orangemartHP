@@ -26,7 +26,9 @@
     width: 100%;
 }
 .news p {
-    font-size: 1.5em !important;
+    font-size: 1.25em !important;
+    line-height: 1.5em;
+    margin: 7px 0;
 }
 .v-card {
     border: 1px solid orange;
@@ -40,6 +42,14 @@
 }
 .display-1 {
     border-bottom: 1px dotted gray;
+    margin: 0;
+}
+.v-list-item {
+    padding: 0;
+    text-indent: 1em;
+}
+.v-list-item__content {
+    padding: 0;
 }
 </style>
 
