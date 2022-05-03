@@ -12,7 +12,7 @@
                 <v-col cols="0" sm="0" md="3" lg="3">
                 </v-col>
                 <v-col cols="12" sm="12" md="6" lg="6">
-                    <v-btn to="/leaflet" x-large color="orange accent-3" block class="white--text"><b>今週のチラシ</b></v-btn>
+                    <v-btn to="/leaflet" x-large color="orange accent-3" block class="white--text"><b>チラシ情報</b></v-btn>
                 </v-col>
                 <v-col cols="0" sm="0" md="3" lg="3">
                 </v-col>

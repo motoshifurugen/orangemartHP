@@ -72,7 +72,7 @@ export default {
             show: null,
             nav_lists:[
                 {
-                    name: '今週のチラシ',
+                    name: 'チラシ情報',
                     icon: 'mdi-cart-variant',
                     link: '/leaflet'
                 },
