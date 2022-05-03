@@ -124,7 +124,7 @@
       </template>
     </v-data-table>
     <v-spacer></v-spacer>
-    <v-btn to="/admin" class="orange--text">管理ページへ</v-btn>
+    <v-btn to="/admin" class="orange--text">管理ページへ戻る</v-btn>
   </div>
 </template>
 
