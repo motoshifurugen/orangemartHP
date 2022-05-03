@@ -82,12 +82,6 @@ export default {
             .then(response => (
                 this.info = response.data.slice().reverse()
             ));
-        const title = "お知らせ | オレンジマート"
-        const description = "オレンジマートオークラの最新情報をお届けします。"
-        document.title = title
-        document.querySelector("meta[property='og:title']").setAttribute('content', title)
-        document.querySelector("meta[name='description']").setAttribute('content', description)
-        document.querySelector("meta[property='og:description']").setAttribute('content', description)
     },
     filters: {
         moment(date) {

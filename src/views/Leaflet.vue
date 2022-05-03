@@ -52,12 +52,6 @@ export default {
         axios
             .get('https://xs199209.xsrv.jp/api/upload')
             .then(response => (this.leaflet = response.data));
-        const title = "チラシ | オレンジマート"
-        const description = "オレンジマートオークラのお得情報が詰まったチラシを掲載します。"
-        document.title = title
-        document.querySelector("meta[property='og:title']").setAttribute('content', title)
-        document.querySelector("meta[name='description']").setAttribute('content', description)
-        document.querySelector("meta[property='og:description']").setAttribute('content', description)
     },
     filters: {
         moment(date) {
