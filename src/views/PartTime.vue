@@ -202,5 +202,13 @@ export default {
             },
         ]
     }),
+    mounted () {
+        const title = "アルバイト情報 | オレンジマート"
+        const description = "オレンジマートオークラは、一緒に働いてくれる方を募集しています。未経験者大歓迎です。"
+        document.title = title
+        document.querySelector("meta[property='og:title']").setAttribute('content', title)
+        document.querySelector("meta[name='description']").setAttribute('content', description)
+        document.querySelector("meta[property='og:description']").setAttribute('content', description)
+    },
 }
 </script>

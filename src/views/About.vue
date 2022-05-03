@@ -69,6 +69,14 @@ export default {
                 href: '/orange/about',
             },
         ]
-    })
+    }),
+    mounted () {
+        const title = "店舗情報 | オレンジマート"
+        const description = "オレンジマートオークラは、鮮度がいい魚や食材を販売している池袋のスーパーです。"
+        document.title = title
+        document.querySelector("meta[property='og:title']").setAttribute('content', title)
+        document.querySelector("meta[name='description']").setAttribute('content', description)
+        document.querySelector("meta[property='og:description']").setAttribute('content', description)
+    },
 }
 </script>

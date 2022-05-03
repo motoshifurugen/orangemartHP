@@ -66,5 +66,13 @@ export default {
             ],
         }
     },
+    mounted () {
+        const title = "企業情報 | オレンジマート"
+        const description = "オレンジマートオークラは、株式会社大倉が運営しています。"
+        document.title = title
+        document.querySelector("meta[property='og:title']").setAttribute('content', title)
+        document.querySelector("meta[name='description']").setAttribute('content', description)
+        document.querySelector("meta[property='og:description']").setAttribute('content', description)
+    },
 }
 </script>

@@ -189,6 +189,12 @@ export default {
             .then(response => (
                 this.info = response.data.reverse().slice(0,3)
             ));
+        const title = "トップ | オレンジマート"
+        const description = "オレンジマートオークラは、鮮度がいい魚や食材を販売している池袋のスーパーです。"
+        document.title = title
+        document.querySelector("meta[property='og:title']").setAttribute('content', title)
+        document.querySelector("meta[name='description']").setAttribute('content', description)
+        document.querySelector("meta[property='og:description']").setAttribute('content', description)
     },
     filters: {
         moment(date) {
