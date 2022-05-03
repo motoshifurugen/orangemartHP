@@ -16,13 +16,13 @@
                 </template>
             </v-simple-table>
             <br>
-            <v-row class="center">
+            <!-- <v-row class="center">
                 <v-col cols="0" sm="0" md="3" lg="3"></v-col>
                 <v-col cols="12" sm="12" md="6" lg="6">
                     <v-btn href="http://umintyu-water.com/" target="_blank" x-large color="blue accent-4" block class="white--text"><b>ウォーターサーバー「海人ぬ宝」</b></v-btn>
                 </v-col>
                 <v-col cols="0" sm="0" md="3" lg="3"></v-col>
-            </v-row>
+            </v-row> -->
         </v-container>
     </div>
 </template>
