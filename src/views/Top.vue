@@ -72,7 +72,7 @@
                 </v-col>
             </v-row>
             <div class="text text-p">
-                <p>オレンジマートでは、一緒に働いてくれる仲間を随時募集中です！</p>
+                <p>オレンジマートオオクラでは、一緒に働いてくれる仲間を随時募集中です！</p>
             </div>
             <v-row class="center">
                 <v-col cols="12" sm="12" md="6" lg="6">

@@ -1,4 +1,4 @@
-# オレンジマートホームページ
+# オレンジマートオオクラのホームページ
 
 ### Compiles and hot-reloads for development
 ```

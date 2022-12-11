@@ -5,7 +5,7 @@
                 <v-list-item>
                     <v-list-item-content>
                         <v-list-item-title class="title grey--text text--darken-2">
-                            <router-link class="simple-link menu-top" to="/"><b>オレンジマート</b></router-link>
+                            <router-link class="simple-link menu-top" to="/"><b>オレンジマートオオクラ</b></router-link>
                         </v-list-item-title>
                     </v-list-item-content>
                 </v-list-item>
@@ -23,7 +23,7 @@
             </v-container>
         </v-navigation-drawer>
         <v-app-bar elevation="1" class="yellow darken-3" dark app>
-            <v-toolbar-title>オレンジマート</v-toolbar-title>
+            <v-toolbar-title>オレンジマートオオクラ</v-toolbar-title>
             <v-spacer></v-spacer>
             <v-app-bar-nav-icon @click="side_menu=!side_menu"></v-app-bar-nav-icon>
         </v-app-bar>
@@ -37,7 +37,7 @@
                 </v-btn>
                 <div v-if="show"><Login ></Login></div>
                 <v-col class="yellow darken-3 py-4 text-center white--text" cols="12" >
-                    {{ new Date().getFullYear() }} — <strong>株式会社大倉企画</strong>
+                    {{ new Date().getFullYear() }} — <strong>株式会社大倉</strong>
                 </v-col>
             </v-row>
         </v-footer>

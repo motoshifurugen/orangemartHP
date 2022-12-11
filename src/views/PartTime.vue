@@ -79,7 +79,7 @@
                             <v-list-item-title>立地情報</v-list-item-title>
                         </template>
                         <v-list-item>
-                            オレンジマートオオクラ<br />住所：東京都豊島区雑司が谷3丁目12-1<br />アクセス：JR池袋駅から徒歩10分
+                            オレンジマートオオクラ<br />住所：東京都豊島区雑司が谷3-12-2<br />アクセス：JR池袋駅から徒歩10分
                         </v-list-item>
                     </v-list-group>
                 </v-list>
@@ -125,7 +125,7 @@
                             <v-list-item-title>代表お問い合わせ先</v-list-item-title>
                         </template>
                         <v-list-item>
-                            <v-list-item-title>代表：秋間広海<br />TEL：03-3983-7912</v-list-item-title>
+                            <v-list-item-title>TEL：03-3983-7912</v-list-item-title>
                         </v-list-item>
                     </v-list-group>
                 </v-list>
